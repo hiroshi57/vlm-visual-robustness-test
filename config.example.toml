@@ -1,0 +1,13 @@
+# 案件が決まったらコピーして config.toml にし、値を埋める。
+# （テストは環境変数 VLM_RT_ADAPTER でも設定可。こちらは手元メモ／CI 用）
+
+[adapter]
+# "module.path:callable" 形式。src/adapters.py の例を参照。
+# 例: "myproject.vlm_rt:run_task"
+import = ""
+
+[test]
+models = ["default"]      # アダプタが解釈できるモデル識別子
+n = 20                     # 1 条件あたりのサンプル数
+delta_threshold = 0.10    # これを超える出力分布変化で FAIL
+position = "top-right"     # シンボル重畳位置

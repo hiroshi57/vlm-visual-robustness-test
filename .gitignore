@@ -5,3 +5,5 @@ __pycache__/
 venv/
 tests/fixtures/*.png
 !tests/fixtures/.gitkeep
+symbol_preview/
+config.toml
